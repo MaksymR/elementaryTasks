@@ -18,7 +18,7 @@ public class App {
         } catch (NumberFormatException ex) {
 
             System.out.println("Arguments entered in the wrong format." +
-                    " Try again with using integer digits, please.");
+                    " Try again with using two integer digits, please.");
 
         } catch (ArrayIndexOutOfBoundsException ex) {
 

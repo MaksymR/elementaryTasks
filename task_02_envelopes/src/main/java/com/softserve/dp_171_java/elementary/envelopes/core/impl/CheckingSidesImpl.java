@@ -18,26 +18,36 @@ public class CheckingSidesImpl implements CheckingSides {
             One envelope can fit into another if and only if both the width and height of one envelope
              is greater than the width and height of the other envelope
              */
-            if (checkSidesBigEnvelopeWithLittleEnvelope(widthFirstEnvelope, widthSecondEnvelope)) {
-                if (checkSidesBigEnvelopeWithLittleEnvelope(widthFirstEnvelope, heightSecondEnvelope)) {
-                    if (checkSidesBigEnvelopeWithLittleEnvelope(heightFirstEnvelope, heightSecondEnvelope)) {
-                        if (checkSidesBigEnvelopeWithLittleEnvelope(heightFirstEnvelope, widthSecondEnvelope)) {
-                            return true;
-                        }
-                    }
-                }
+            int comparisonOne =
+                    checkSidesBigEnvelopeWithLittleEnvelope(widthFirstEnvelope, widthSecondEnvelope) ? 1 : 0;
+            int comparisonTwo =
+                    checkSidesBigEnvelopeWithLittleEnvelope(widthFirstEnvelope, heightSecondEnvelope) ? 1 : 0;
+            int comparisonThree =
+                    checkSidesBigEnvelopeWithLittleEnvelope(heightFirstEnvelope, heightSecondEnvelope) ? 1 : 0;
+            int comparisonFour =
+                    checkSidesBigEnvelopeWithLittleEnvelope(heightFirstEnvelope, widthSecondEnvelope) ? 1 : 0;
+
+            int sumComparisons = comparisonOne + comparisonTwo + comparisonThree + comparisonFour;
+
+            if (sumComparisons == 4) {
+                return true;
             } else {
                 return false;
             }
         } else if ((AreaFirstEnvelope < AreaSecondEnvelope)) {
-            if (checkSidesLittleEnvelopeWithBigEnvelope(widthFirstEnvelope, widthSecondEnvelope)) {
-                if (checkSidesLittleEnvelopeWithBigEnvelope(widthFirstEnvelope, heightSecondEnvelope)) {
-                    if (checkSidesLittleEnvelopeWithBigEnvelope(heightFirstEnvelope, heightSecondEnvelope)) {
-                        if (checkSidesLittleEnvelopeWithBigEnvelope(heightFirstEnvelope, widthSecondEnvelope)) {
-                            return true;
-                        }
-                    }
-                }
+            int comparisonOne =
+                    checkSidesLittleEnvelopeWithBigEnvelope(widthFirstEnvelope, widthSecondEnvelope) ? 1 : 0;
+            int comparisonTwo =
+                    checkSidesLittleEnvelopeWithBigEnvelope(widthFirstEnvelope, widthSecondEnvelope) ? 1 : 0;
+            int comparisonThree =
+                    checkSidesLittleEnvelopeWithBigEnvelope(heightFirstEnvelope, heightSecondEnvelope) ? 1 : 0;
+            int comparisonFour =
+                    checkSidesLittleEnvelopeWithBigEnvelope(heightFirstEnvelope, widthSecondEnvelope) ? 1 : 0;
+
+            int sumComparisons = comparisonOne + comparisonTwo + comparisonThree + comparisonFour;
+
+            if (sumComparisons == 4) {
+                return true;
             } else {
                 return false;
             }

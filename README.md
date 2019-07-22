@@ -8,3 +8,6 @@
 
 * 3 - task_03_sortingOfTriangles: branch - task_03_sortingOfTriangles
 > read the instruction in the ./task_03_sortingOfTriangles/README.md
+
+* 4 - task_04_fileParser: branch - task_04_fileParser
+> read the instruction in the ./task_04_fileParser/README.md

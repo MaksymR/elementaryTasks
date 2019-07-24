@@ -14,3 +14,6 @@
 
 * 5 - task_05_digitToWord: branch - task_05_digitToWord
 > read the instruction in the ./task_05_digitToWord/
+
+* 6 - task_06_luckyTickets: branch - task_06_luckyTickets
+> read the instruction in the ./task_06_luckyTickets

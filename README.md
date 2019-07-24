@@ -11,3 +11,6 @@
 
 * 4 - task_04_fileParser: branch - task_04_fileParser
 > read the instruction in the ./task_04_fileParser/README.md
+
+* 5 - task_05_digitToWord: branch - task_05_digitToWord
+> read the instruction in the ./task_05_digitToWord/

@@ -13,6 +13,7 @@
         <module>task_02_envelopes</module>
         <module>task_03_sortingOfTriangles</module>
         <module>task_04_fileParser</module>
+        <module>task_05_digitToWord</module>
     </modules>
 
     <properties>

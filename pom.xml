@@ -15,6 +15,7 @@
         <module>task_04_fileParser</module>
         <module>task_05_digitToWord</module>
         <module>task_06_luckyTickets</module>
+        <module>task_07_numericSequence</module>
     </modules>
 
     <properties>

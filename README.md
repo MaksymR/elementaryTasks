@@ -17,3 +17,6 @@
 
 * 6 - task_06_luckyTickets: branch - task_06_luckyTickets
 > read the instruction in the ./task_06_luckyTickets
+
+* 7 - task_07_numericSequence: branch - task_07_numericSequence
+> read the instruction in the ./task_07_numericSequence

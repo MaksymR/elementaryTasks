@@ -16,6 +16,7 @@
         <module>task_05_digitToWord</module>
         <module>task_06_luckyTickets</module>
         <module>task_07_numericSequence</module>
+        <module>task_08_fibonacci</module>
     </modules>
 
     <properties>

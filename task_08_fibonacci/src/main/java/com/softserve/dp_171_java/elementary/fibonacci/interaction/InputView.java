@@ -72,10 +72,14 @@ public class InputView {
 
 
     public int getDigitForWorkFirst() {
-        return digitForWorkFirst;
+        int tempDigitForWorkFirst = digitForWorkFirst;
+        digitForWorkFirst = 0;
+        return tempDigitForWorkFirst;
     }
 
     public int getDigitForWorkSecond() {
-        return digitForWorkSecond;
+        int tempDigitForWorkSecond = digitForWorkSecond;
+        digitForWorkSecond = 0;
+        return tempDigitForWorkSecond;
     }
 }

@@ -55,8 +55,9 @@ public class WorkWithFile {
         while (lineForReplace != null) {
             String newLineAfterReplace =
                     lineForReplace.replaceAll(arrayWordForCounting[0], arrayWordForCounting[1]);
-            System.out.println(newLineAfterReplace);
-            bufferedWriter.write(newLineAfterReplace);
+            String tempLineForWriting = newLineAfterReplace + "\r";
+            System.out.println(tempLineForWriting);
+            bufferedWriter.write(tempLineForWriting);
             lineForReplace = bufferedReaderForWriting.readLine();
         }
     }
@@ -71,7 +72,7 @@ public class WorkWithFile {
     private void txtFileToStringArray(BufferedReader bufferedReader, String line, List<String> listWords) throws IOException {
         while (line != null) {
             System.out.println(line);
-            String[] textWords = line.split("\\s*(\\s)\\s*");
+            String[] textWords = line.split("([.,!?():;'\"-]|\\s)+");
             for (String s : textWords) {
                 listWords.add(s);
             }

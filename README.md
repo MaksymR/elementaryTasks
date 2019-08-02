@@ -23,3 +23,6 @@
 
 * 8 - task_08_fibonacci: branch - task_08_fibonacci
 > read the instruction in the ./task_08_fibonacci/README.md
+
+* 9 - task_09_exponentiation: branch - task_09_exponentiation
+> read the instruction in the ./task_09_exponentiation

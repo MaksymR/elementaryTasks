@@ -17,6 +17,7 @@
         <module>task_06_luckyTickets</module>
         <module>task_07_numericSequence</module>
         <module>task_08_fibonacci</module>
+        <module>task_09_exponentiation</module>
     </modules>
 
     <properties>

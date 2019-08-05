@@ -15,14 +15,30 @@ public class App {
         try {
             while (true) {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
                 System.out.println("Input a width of the first envelope (only one floating-point number): ");
-                double firstWidth = Double.parseDouble(bufferedReader.readLine());
+                double firstWidth = getEnvelopesSide(bufferedReader);
+                if (checkSideForNegativeParameter(firstWidth)) {
+                    continue;
+                }
+
                 System.out.println("Input a height of the first envelope (only one floating-point number): ");
-                double firstHeight = Double.parseDouble(bufferedReader.readLine());
+                double firstHeight = getEnvelopesSide(bufferedReader);
+                if (checkSideForNegativeParameter(firstHeight)) {
+                    continue;
+                }
+
                 System.out.println("Input a width of the second envelope (only one floating-point number): ");
-                double secondWidth = Double.parseDouble(bufferedReader.readLine());
+                double secondWidth = getEnvelopesSide(bufferedReader);
+                if (checkSideForNegativeParameter(secondWidth)) {
+                    continue;
+                }
+
                 System.out.println("Input a height of the second envelope (only one floating-point number): ");
-                double secondHeight = Double.parseDouble(bufferedReader.readLine());
+                double secondHeight = getEnvelopesSide(bufferedReader);
+                if (checkSideForNegativeParameter(secondHeight)) {
+                    continue;
+                }
 
 
                 Envelope firstEnvelope = new Envelope(firstWidth, firstHeight);
@@ -52,6 +68,18 @@ public class App {
                     " (not the one floating-point number or another symbol). Try again, please");
         }
 
+    }
+
+    private static boolean checkSideForNegativeParameter(double envelopesSide) {
+        if (envelopesSide <= 0) {
+            System.out.println("Don't enter a negative number or zero, please");
+            return true;
+        }
+        return false;
+    }
+
+    private static double getEnvelopesSide(BufferedReader bufferedReader) throws IOException {
+        return Double.parseDouble(bufferedReader.readLine());
     }
 
 }

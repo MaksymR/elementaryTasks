@@ -12,7 +12,7 @@ public class App {
             int height = getArgsElement(args, 0);
             int width = getArgsElement(args, 1);
 
-            if ((height <= 0) && (width <=0)) {
+            if ((height <= 0) && (width <= 0)) {
                 System.out.println("Entering arguments have to been more than zero." +
                         " Try again with using positive number, please");
                 return;

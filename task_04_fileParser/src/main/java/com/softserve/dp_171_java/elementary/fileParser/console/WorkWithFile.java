@@ -30,6 +30,10 @@ public class WorkWithFile {
 
                 String[] arrayWordForCounting = wordForCounting.split("\\s*(\\s)\\s*");
                 if (arrayWordForCounting.length == 1) {
+                    if (arrayWordForCounting[0].equals("")) {
+                        System.out.println("Enter a word or words according to the format as above, please!");
+                        continue;
+                    }
                     countingOfWord(listWords, wordForCounting);
                 } else if (arrayWordForCounting.length == 2) {
                     replaceWordsAndWriteToFile(bufferedWriter, arrayWordForCounting);
@@ -49,26 +53,6 @@ public class WorkWithFile {
         }
     }
 
-    private void replaceWordsAndWriteToFile(BufferedWriter bufferedWriter, String[] arrayWordForCounting) throws IOException {
-        BufferedReader bufferedReaderForWriting = new BufferedReader(new FileReader(PATH_TO_FILE_FOR_READING));
-        String lineForReplace = bufferedReaderForWriting.readLine();
-        while (lineForReplace != null) {
-            String newLineAfterReplace =
-                    lineForReplace.replaceAll(arrayWordForCounting[0], arrayWordForCounting[1]);
-            String tempLineForWriting = newLineAfterReplace + "\r";
-            System.out.println(tempLineForWriting);
-            bufferedWriter.write(tempLineForWriting);
-            lineForReplace = bufferedReaderForWriting.readLine();
-        }
-    }
-
-    private void outputTextForActions() {
-        System.out.println("\nEnter a word for counting in next format:");
-        System.out.println("<a word for the count>");
-        System.out.println("or a word for replace in next format:");
-        System.out.println(" <a word from text> <a word for replace>");
-    }
-
     private void txtFileToStringArray(BufferedReader bufferedReader, String line, List<String> listWords) throws IOException {
         while (line != null) {
             System.out.println(line);
@@ -80,9 +64,29 @@ public class WorkWithFile {
         }
     }
 
+    private void outputTextForActions() {
+        System.out.println("\nEnter a word for counting in next format:");
+        System.out.println("<a word for the count>");
+        System.out.println("or a word for replace in next format:");
+        System.out.println(" <a word from text> <a word for replace>");
+    }
+
     private void countingOfWord(List<String> listWords, String wordForCounting) {
         long count = listWords.stream().filter(w -> w.equals(wordForCounting)).count();
         System.out.println(count);
+    }
+
+    private void replaceWordsAndWriteToFile(BufferedWriter bufferedWriter, String[] arrayWordForCounting) throws IOException {
+        BufferedReader bufferedReaderForWriting = new BufferedReader(new FileReader(PATH_TO_FILE_FOR_READING));
+        String lineForReplace = bufferedReaderForWriting.readLine();
+        while (lineForReplace != null) {
+            String newLineAfterReplace =
+                    lineForReplace.replaceAll(arrayWordForCounting[0], arrayWordForCounting[1]);
+            String tempLineForWriting = newLineAfterReplace + "\r";
+            System.out.println(tempLineForWriting);
+            bufferedWriter.write(tempLineForWriting);
+            lineForReplace = bufferedReaderForWriting.readLine();
+        }
     }
 
     private boolean exitAndFinishWorkingWithFile(BufferedReader bufferedReader,

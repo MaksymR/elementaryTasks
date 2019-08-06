@@ -71,11 +71,28 @@ public class WorkWithTriangles {
     private void workWithTriangle(String[] arrayTrianglesDate) {
         String triangleName = arrayTrianglesDate[0] + " " + arrayTrianglesDate[1];
         double sideA = getTrianglesSide(arrayTrianglesDate[2]);
+        if (checkTriangleSide(sideA)) {
+            return;
+        }
         double sideB = getTrianglesSide(arrayTrianglesDate[3]);
+        if (checkTriangleSide(sideB)) {
+            return;
+        }
         double sideC = getTrianglesSide(arrayTrianglesDate[4]);
+        if ((checkTriangleSide(sideC))) {
+            return;
+        }
         Triangle triangle = new Triangle(sideA, sideB, sideC, triangleName);
         triangle.setArea(triangleMathMethods.calculateTriangleAreaByHeron(triangle));
         trianglesList.add(triangle);
+    }
+
+    private boolean checkTriangleSide(double triangleSide) {
+        if (triangleSide <= 0) {
+            System.out.println("Don't enter a negative number or zero, please");
+            return true;
+        }
+        return false;
     }
 
     private double getTrianglesSide(String s) {

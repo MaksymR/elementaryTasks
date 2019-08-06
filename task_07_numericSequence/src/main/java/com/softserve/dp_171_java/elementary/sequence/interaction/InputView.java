@@ -37,7 +37,9 @@ public class InputView {
     }
 
     public int getDigitForWork() {
-        return digitForWork;
+        int numberForReturn = digitForWork;
+        digitForWork = 0;
+        return numberForReturn;
     }
 }
 

@@ -19,7 +19,7 @@ public class TriangleMathMethodsTest {
         when(triangle.getSideB()).thenReturn(4.0);
         when(triangle.getSideC()).thenReturn(5.0);
         double expectedAreaByHeron = 6.0;
-        TriangleMathMethods triangleMathMethodsForTest = new TriangleMathMethodsImpl();
+        TriangleMathMethodsImpl triangleMathMethodsForTest = new TriangleMathMethodsImpl();
         //WHEN
         double actualAreaByHeron = triangleMathMethodsForTest.calculateTriangleAreaByHeron(triangle);
         //THEN
@@ -33,7 +33,7 @@ public class TriangleMathMethodsTest {
         when(triangle.getSideA()).thenReturn(3.0);
         when(triangle.getSideB()).thenReturn(4.0);
         when(triangle.getSideC()).thenReturn(5.0);
-        TriangleMathMethods triangleMathMethodsForTest = new TriangleMathMethodsImpl();
+        TriangleMathMethodsImpl triangleMathMethodsForTest = new TriangleMathMethodsImpl();
         double unexpectedAreaByHeron = 5.9;
         //WHEN
         double actualAreaByHeron = triangleMathMethodsForTest.calculateTriangleAreaByHeron(triangle);

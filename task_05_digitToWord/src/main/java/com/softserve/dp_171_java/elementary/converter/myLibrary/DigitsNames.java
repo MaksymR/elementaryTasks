@@ -25,7 +25,7 @@ public class DigitsNames {
             " nineteen"
     };
 
-    public static final String[] TENS_DIGIT_NAMES_TO_NINTY = {
+    public static final String[] TENS_DIGIT_NAMES_TO_NINETY = {
             " ",
             " ten",
             " twenty",

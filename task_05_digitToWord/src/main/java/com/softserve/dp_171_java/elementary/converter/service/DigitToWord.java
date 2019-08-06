@@ -45,7 +45,7 @@ public class DigitToWord {
             current = SIMPLE_DIGITS_NAMES_TO_NINETEEN[digitLessThanOneThousand % 10];
             digitLessThanOneThousand /= 10;
 
-            current = TENS_DIGIT_NAMES_TO_NINTY[digitLessThanOneThousand % 10] + current;
+            current = TENS_DIGIT_NAMES_TO_NINETY[digitLessThanOneThousand % 10] + current;
             digitLessThanOneThousand /= 10;
         }
         if (digitLessThanOneThousand == 0) return current;
